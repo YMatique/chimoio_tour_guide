@@ -11,9 +11,32 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CHIMOIO TOUR GUIDE',
+      title: 'Guia Turístico de Chimoio',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primaryColor: Color.fromRGBO(24, 35, 57, 255),
+        scaffoldBackgroundColor: Colors.white,
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Color.fromRGBO(24, 35, 57, 1),
+        foregroundColor: Colors.white,
+        titleTextStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)
+      ),
+        textTheme: const TextTheme(
+        headlineLarge: TextStyle(
+            fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black87),
+        headlineMedium: TextStyle(
+            fontSize: 22, fontWeight: FontWeight.w600, color: Colors.black87),
+        bodyLarge: TextStyle(
+            fontSize: 18, fontWeight: FontWeight.w500, color: Colors.black87),
+        bodyMedium: TextStyle(
+            fontSize: 16, fontWeight: FontWeight.normal, color: Colors.black87),
+        bodySmall: TextStyle(
+            fontSize: 14, fontWeight: FontWeight.normal, color: Colors.black87),
+        labelLarge: TextStyle(
+            fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black87),
+        labelSmall: TextStyle(
+            fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black87),
+      ),
         // This is the theme of your application.
         //
         // TRY THIS: Try running your application with "flutter run". You'll see
@@ -29,10 +52,10 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        // colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(24, 35, 57, 255)),
         
       ),
-      home: const MyHomePage(title: 'CHIMOIO TOUR GUIDE'),
+      home: const MyHomePage(title: 'Guia Turístico de Chimoio'),
     );
   }
 }
@@ -82,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
         // change color while the other colors stay the same.
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        // backgroundColor: Color.fromRGBO(24, 35, 57, 255),
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),

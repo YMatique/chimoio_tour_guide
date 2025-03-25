@@ -30,6 +30,9 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+            <!-- API KEY FOR GOOGLE MAPS -->
+            <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBm8VIwNwf9C_G_G9S2627gJCju1gZAIwo"/>
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and
@@ -42,4 +45,10 @@
             <data android:mimeType="text/plain"/>
         </intent>
     </queries>
+    <!-- Internet permission -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--  -->
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+<uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
 </manifest>
