@@ -1,3 +1,4 @@
+import 'package:chimoio_tour_guide/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -55,7 +56,7 @@ class MyApp extends StatelessWidget {
         // colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(24, 35, 57, 255)),
         
       ),
-      home: const MyHomePage(title: 'Guia Turístico de Chimoio'),
+      home: HomeScreen(),
     );
   }
 }
