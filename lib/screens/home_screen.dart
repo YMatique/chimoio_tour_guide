@@ -118,7 +118,7 @@ class HomeScreen extends StatelessWidget {
                       _buildCustomButton(
                         context,
                         title: 'Transporte',
-                        icon: Icons.map,
+                        icon: Icons.directions_bus,
                         onPressed: () {
                           Navigator.push(
                             context,
@@ -144,6 +144,11 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                Text("O Guia Turístico para conhecer a cidade de Chimoio", style: TextStyle(fontSize: 14, fontWeight: FontWeight.w300, color: Colors.white),)
+              ],)
             ],
           ),
         ),

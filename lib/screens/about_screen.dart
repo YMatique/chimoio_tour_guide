@@ -87,7 +87,8 @@ class AboutScreen extends StatelessWidget {
                   'Dart: Linguagem de programação.\n'
                   'Google Maps API: Para mapas e rotas.\n'
                   'SQFLite: Banco de dados local para modo offline.\n'
-                  'Outras: HTTP, Location, e bibliotecas Flutter.',
+                  'Outras: HTTP, Location, e bibliotecas Flutter.\n\n'
+                  'Versão: v1.0.0',	
                   context,
                 ),
 
