@@ -63,9 +63,9 @@ class _ItineraryScreenState extends State<ItineraryScreen> {
                               title: Text(item.name, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
                               subtitle: Text(
                                 item is TouristSpot
-                                    ? (item as TouristSpot).description
+                                    ? item.description
                                     : item is Restaurant
-                                    ? (item as Restaurant).cuisine
+                                    ? item.cuisine
                                     : '${(item as Event).dateTime} - ${(item as Event).location}',
                                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
                               ),
@@ -104,8 +104,8 @@ class _ItineraryScreenState extends State<ItineraryScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: _addItemToItinerary,
         backgroundColor: Color(0xFF18243C),
-        child: Icon(Icons.add),
         elevation: 1,
+        child: Icon(Icons.add),
       ),
     );
   }

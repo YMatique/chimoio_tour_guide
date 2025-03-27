@@ -82,9 +82,9 @@ class _MapScreenState extends State<MapScreen> {
               title: spot.name,
               snippet:
                   spot is TouristSpot
-                      ? (spot as TouristSpot).description
+                      ? spot.description
                       : spot is Restaurant
-                      ? (spot as Restaurant).cuisine
+                      ? spot.cuisine
                       : (spot as Event).dateTime,
             ),
           ),
@@ -116,9 +116,9 @@ class _MapScreenState extends State<MapScreen> {
               title: spot.name,
               snippet:
                   spot is TouristSpot
-                      ? (spot as TouristSpot).description
+                      ? spot.description
                       : spot is Restaurant
-                      ? (spot as Restaurant).cuisine
+                      ? spot.cuisine
                       : (spot as Event).dateTime,
             ),
           ),
@@ -150,8 +150,9 @@ class _MapScreenState extends State<MapScreen> {
         currentLocation = newLocation;
         _updateUserMarker();
         _checkProximity();
-        if (routeTraced && !showAllSpots && widget.itinerary == null)
+        if (routeTraced && !showAllSpots && widget.itinerary == null) {
           _fetchRoute();
+        }
       });
     } catch (e) {
       ScaffoldMessenger.of(
@@ -423,12 +424,12 @@ class _MapScreenState extends State<MapScreen> {
         backgroundColor: Color(0xFF18243C),
         actions: [
           IconButton(
-            icon: Icon(Icons.directions, color: Color(0xFFFF9626)),
+            icon: Icon(Icons.directions, color: Colors.white),
             onPressed: widget.itinerary == null ? _fetchRoute : null,
             tooltip: 'Traçar Rota',
           ),
           IconButton(
-            icon: Icon(Icons.map, color: Color(0xFFFF9626)),
+            icon: Icon(Icons.map, color: Colors.white),
             onPressed: _loadAllSpots,
             tooltip: 'Ver todos os pontos',
           ),
