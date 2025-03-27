@@ -2,9 +2,56 @@ import 'package:chimoio_tour_guide/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp( ChimoioTourGuideApp());
 }
-
+class ChimoioTourGuideApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Guia Turístico de Chimoio',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Color(0xFF18243C),
+        scaffoldBackgroundColor: Colors.white,
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          primary: Color(0xFF18243C),
+          secondary: Color(0xFFFF9626),
+        ),
+        fontFamily: 'NotoSans',
+        textTheme: const TextTheme(
+        headlineLarge: TextStyle(
+            fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black87),
+        headlineMedium: TextStyle(
+            fontSize: 22, fontWeight: FontWeight.w600, color: Colors.black87),
+        bodyLarge: TextStyle(
+            fontSize: 18, fontWeight: FontWeight.w500, color: Colors.black87),
+        bodyMedium: TextStyle(
+            fontSize: 16, fontWeight: FontWeight.normal, color: Colors.black87),
+        bodySmall: TextStyle(
+            fontSize: 14, fontWeight: FontWeight.normal, color: Colors.black87),
+        labelLarge: TextStyle(
+            fontSize: 16, fontWeight: FontWeight.w600, color: Colors.black87),
+        labelSmall: TextStyle(
+            fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black87),
+      ),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Color(0xFF18243C),
+          foregroundColor: Color(0xFFFF9626),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Color(0xFF18243C),
+            foregroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+          ),
+        ),
+      ),
+      home: HomeScreen(),
+    );
+  }
+}
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
