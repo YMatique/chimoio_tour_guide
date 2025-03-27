@@ -23,8 +23,8 @@ class EventsScreen extends StatelessWidget {
               final event = events[index];
               return ListTile(
                 leading: Icon(Icons.event, color: Color(0xFF18243C)),
-                title: Text(event.name),
-                subtitle: Text('${event.dateTime} - ${event.location}'),
+                title: Text(event.name, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+                subtitle: Text('${event.dateTime} - ${event.location}', style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),),
                 onTap: () {
                   Navigator.push(
                     context,
