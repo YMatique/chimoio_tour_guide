@@ -24,9 +24,9 @@ class TransportScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               final transport = transports[index];
               return ListTile(
-                leading: Icon(Icons.directions_bus, color: Colors.green),
-                title: Text(transport.route),
-                subtitle: Text(transport.description),
+                leading: Icon(Icons.directions_bus, color: Color(0xFF18243C)),
+                title: Text(transport.route, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+                subtitle: Text(transport.description, style: TextStyle(fontSize: 14, ),),
               );
             },
           );
