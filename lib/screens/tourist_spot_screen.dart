@@ -26,8 +26,8 @@ class TouristSpotsScreen extends StatelessWidget {
               final spot = spots[index];
               return ListTile(
                 leading: Icon(Icons.place, color: Color(0xFF18243C)),
-                title: Text(spot.name),
-                subtitle: Text(spot.description),
+                title: Text(spot.name, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+                subtitle: Text(spot.description, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),),
                 onTap: () {
                   Navigator.push(
                     context,
