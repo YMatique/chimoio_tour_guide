@@ -36,7 +36,9 @@ class ChimoioTourGuideApp extends StatelessWidget {
       ),
         appBarTheme: AppBarTheme(
           backgroundColor: Color(0xFF18243C),
-          foregroundColor: Color(0xFFFF9626),
+          // foregroundColor: Color(0xFFFF9626),
+          foregroundColor: Colors.white,
+          titleTextStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
