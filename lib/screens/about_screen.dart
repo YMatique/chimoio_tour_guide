@@ -25,20 +25,20 @@ class AboutScreen extends StatelessWidget {
                     Text(
                       'Sobre o App',
                       style: TextStyle(
-                        fontSize: 32,
+                        fontSize: 24,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
-                        letterSpacing: 1.5,
+                        letterSpacing: 1,
                       ),
                     ),
                     SizedBox(width: 10),
-                    Icon(Icons.info, color: Color(0xFFFF9626), size: 32),
+                    Icon(Icons.info, color: Color(0xFFFF9626), size: 24),
                   ],
                 ),
                 SizedBox(height: 10),
                 Center(
                   child: Container(
-                    height: 4,
+                    height: 2,
                     width: 100,
                     decoration: BoxDecoration(
                       gradient: LinearGradient(
@@ -54,41 +54,40 @@ class AboutScreen extends StatelessWidget {
                 _buildSectionTitle('O que o App Faz', context),
                 _buildSectionContent(
                   'O "Guia Turístico Inteligente para Chimoio" é um aplicativo móvel projetado para ajudar turistas e moradores a explorar a cidade de Chimoio, Moçambique. Ele oferece uma experiência interativa com:\n\n'
-                  '- Lista de Pontos Turísticos: Descubra locais como Monte Bengo e Lago Chicamba.\n'
-                  '- Restaurantes: Encontre opções gastronômicas locais.\n'
-                  '- Eventos: Fique por dentro de festivais e atividades.\n'
-                  '- Roteiros Personalizados: Crie itinerários com distâncias e tempos estimados.\n'
-                  '- Mapa Interativo: Visualize rotas e pontos de interesse com suporte offline para dados locais.',
+                  'Lista de Pontos Turísticos: Descubra locais como Monte Bengo e Lago Chicamba.\n'
+                  'Restaurantes: Encontre opções gastronômicas locais.\n'
+                  'Eventos: Fique por dentro de festivais e atividades.\n'
+                  'Roteiros Personalizados: Crie itinerários com distâncias e tempos estimados.\n'
+                  'Mapa Interativo: Visualize rotas e pontos de interesse com suporte offline para dados locais.',
                   context,
                 ),
 
                 // Benefícios
                 _buildSectionTitle('Benefícios', context),
                 _buildSectionContent(
-                  '- Facilidade de Uso: Interface intuitiva e amigável.\n'
-                  '- Modo Offline: Acesso a listas mesmo sem internet.\n'
-                  '- Navegação: Rotas em tempo real com Google Maps.\n'
-                  '- Personalização: Monte seu próprio roteiro.\n'
-                  '- Informação Local: Detalhes sobre Chimoio ao seu alcance.',
+                  'Facilidade de Uso: Interface intuitiva e amigável.\n'
+                  'Modo Offline: Acesso a listas mesmo sem internet.\n'
+                  'Navegação: Rotas em tempo real com Google Maps.\n'
+                  'Personalização: Monte seu próprio roteiro.\n'
+                  'Informação Local: Detalhes sobre Chimoio ao seu alcance.',
                   context,
                 ),
 
                 // Desenvolvedor
                 _buildSectionTitle('Desenvolvedor', context),
                 _buildSectionContent(
-                  'Desenvolvido por Francelino , um entusiasta/equipe apaixonado(a) por tecnologia e turismo, com o objetivo de promover Chimoio como destino turístico e facilitar a experiência dos visitantes.',
+                  'Desenvolvido por Francelino David N. Rungo, um entusiasta apaixonado por tecnologia e turismo, com o objetivo de promover Chimoio como destino turístico e facilitar a experiência dos visitantes.',
                   context,
                 ),
 
                 // Ferramentas Usadas
                 _buildSectionTitle('Ferramentas Usadas', context),
                 _buildSectionContent(
-                  '- Flutter: Framework para desenvolvimento multiplataforma.\n'
-                  '- Dart: Linguagem de programação.\n'
-                  '- Google Maps API: Para mapas e rotas.\n'
-                  '- SQFLite: Banco de dados local para modo offline.\n'
-                  '- xAI Grok: Assistente de IA para suporte no desenvolvimento.\n'
-                  '- Outras: HTTP, Location, e bibliotecas Flutter.',
+                  'Flutter: Framework para desenvolvimento multiplataforma.\n'
+                  'Dart: Linguagem de programação.\n'
+                  'Google Maps API: Para mapas e rotas.\n'
+                  'SQFLite: Banco de dados local para modo offline.\n'
+                  'Outras: HTTP, Location, e bibliotecas Flutter.',
                   context,
                 ),
 
@@ -101,18 +100,18 @@ class AboutScreen extends StatelessWidget {
                       foregroundColor: Colors.white,
                       padding: EdgeInsets.symmetric(
                         horizontal: 30,
-                        vertical: 15,
+                        vertical: 10,
                       ),
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(25),
+                        borderRadius: BorderRadius.circular(20),
                       ),
-                      elevation: 5,
+                      elevation: 2,
                     ),
                     child: Text(
                       'Voltar',
                       style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
@@ -131,10 +130,10 @@ class AboutScreen extends StatelessWidget {
       child: Text(
         title,
         style: TextStyle(
-          fontSize: 24,
+          fontSize: 18,
           fontWeight: FontWeight.bold,
           color: Color(0xFFFF9626),
-          letterSpacing: 1.2,
+          letterSpacing: 1,
         ),
       ),
     );
