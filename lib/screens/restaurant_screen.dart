@@ -25,9 +25,9 @@ class RestaurantsScreen extends StatelessWidget {
             itemBuilder: (context, index) {
               final restaurant = restaurants[index];
               return ListTile(
-                leading: Icon(Icons.restaurant, color: Colors.green),
-                title: Text(restaurant.name),
-                subtitle: Text(restaurant.cuisine),
+                leading: Icon(Icons.restaurant, color: Color(0xFF18243C)),
+                title: Text(restaurant.name, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
+                subtitle: Text(restaurant.cuisine, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),),
                 onTap: () {
                   Navigator.push(
                     context,
