@@ -1,11 +1,10 @@
+import 'package:chimoio_tour_guide/screens/transport_screen.dart';
 import 'package:flutter/material.dart';
 import 'tourist_spot_screen.dart';
 import 'restaurant_screen.dart';
 import 'event_screen.dart';
 import 'itinerary_screen.dart';
-import 'map_screen.dart';
 import 'about_screen.dart';
-import '../models/tourist_spot.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -118,21 +117,14 @@ class HomeScreen extends StatelessWidget {
                       ),
                       _buildCustomButton(
                         context,
-                        title: 'Mapa',
+                        title: 'Transporte',
                         icon: Icons.map,
                         onPressed: () {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
                               builder:
-                                  (_) => MapScreen(
-                                    initialSpot: TouristSpot(
-                                      name: 'Chimoio',
-                                      description: 'Centro da cidade',
-                                      latitude: -19.1167,
-                                      longitude: 33.4833,
-                                    ),
-                                  ),
+                                  (_) => TransportScreen(),
                             ),
                           );
                         },
