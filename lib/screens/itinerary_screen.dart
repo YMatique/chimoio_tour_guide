@@ -27,7 +27,7 @@ class _ItineraryScreenState extends State<ItineraryScreen> {
         // backgroundColor: Colors.green,
         actions: [
           IconButton(
-            icon: Icon(Icons.map, color: Color(0xFFFF9626)),
+            icon: Icon(Icons.map, color: Colors.white),
             onPressed: itinerary.isNotEmpty ? _showItineraryOnMap : null,
             tooltip: 'Ver no Mapa',
           ),
@@ -60,13 +60,14 @@ class _ItineraryScreenState extends State<ItineraryScreen> {
                                     : Icons.event,
                                 color: Color(0xFFFF9626),
                               ),
-                              title: Text(item.name),
+                              title: Text(item.name, style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),),
                               subtitle: Text(
                                 item is TouristSpot
                                     ? (item as TouristSpot).description
                                     : item is Restaurant
                                     ? (item as Restaurant).cuisine
                                     : '${(item as Event).dateTime} - ${(item as Event).location}',
+                                style: TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
                               ),
                               trailing: IconButton(
                                 icon: Icon(
@@ -86,7 +87,7 @@ class _ItineraryScreenState extends State<ItineraryScreen> {
           ),
           if (itinerary.isNotEmpty)
             Container(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(15),
               color: Colors.white.withOpacity(0.9),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -102,8 +103,9 @@ class _ItineraryScreenState extends State<ItineraryScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _addItemToItinerary,
-        child: Icon(Icons.add),
         backgroundColor: Color(0xFF18243C),
+        child: Icon(Icons.add),
+        elevation: 1,
       ),
     );
   }
@@ -128,9 +130,9 @@ class _ItineraryScreenState extends State<ItineraryScreen> {
                     : item is Restaurant
                     ? Icons.restaurant
                     : Icons.event,
-                color: Colors.green,
+                color:Color(0xFF18243C),
               ),
-              title: Text(item.name),
+              title: Text(item.name, style: TextStyle(fontWeight: FontWeight.w400, fontSize: 16),),
               onTap: () {
                 setState(() {
                   if (!itinerary.contains(item)) {
