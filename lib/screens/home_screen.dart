@@ -4,7 +4,7 @@ import 'restaurant_screen.dart';
 import 'event_screen.dart';
 import 'itinerary_screen.dart';
 import 'map_screen.dart';
-import 'about_screen.dart'; // Novo import
+import 'about_screen.dart';
 import '../models/tourist_spot.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -29,24 +29,24 @@ class HomeScreen extends StatelessWidget {
                     Text(
                       'Guia Turístico',
                       style: TextStyle(
-                        fontSize: 32,
+                        fontSize: 28,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
-                        letterSpacing: 1.5,
+                        letterSpacing: 1,
                       ),
                     ),
                     Text(
                       'de Chimoio',
                       style: TextStyle(
-                        fontSize: 28,
+                        fontSize: 24,
                         fontWeight: FontWeight.w300,
                         color: Color(0xFFFF9626),
-                        letterSpacing: 1.2,
+                        letterSpacing: 1,
                       ),
                     ),
                     SizedBox(height: 10),
                     Container(
-                      height: 4,
+                      height: 2,
                       width: 100,
                       decoration: BoxDecoration(
                         gradient: LinearGradient(
@@ -174,18 +174,18 @@ class HomeScreen extends StatelessWidget {
             end: Alignment.bottomRight,
             colors: [Color(0xFF18243C), Color(0xFF25304A)],
           ),
-          borderRadius: BorderRadius.circular(25),
-          border: Border.all(color: Color(0xFFFF9626), width: 2),
+          borderRadius: BorderRadius.circular(15),
+          border: Border.all(color: Color(0xFFFF9626), width: .75),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.4),
-              offset: Offset(0, 6),
-              blurRadius: 10,
+              offset: Offset(0, 2),
+              blurRadius: 2,
             ),
             BoxShadow(
               color: Color(0xFFFF9626).withOpacity(0.2),
               offset: Offset(0, -2),
-              blurRadius: 8,
+              blurRadius: 2,
             ),
           ],
         ),
@@ -204,25 +204,19 @@ class HomeScreen extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(icon, size: 60, color: Color(0xFFFF9626)),
+                Icon(icon, size: 54, color: Color(0xFFFF9626)),
                 SizedBox(height: 12),
-                Padding(
+                Container(
                   padding: EdgeInsets.symmetric(horizontal: 8.0),
+                  alignment: Alignment.center,
                   child: Text(
                     title,
-                    textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
                       color: Colors.white,
                       letterSpacing: 0.8,
-                      shadows: [
-                        Shadow(
-                          color: Color(0xFFFF9626).withOpacity(0.5),
-                          blurRadius: 4,
-                          offset: Offset(0, 2),
-                        ),
-                      ],
+                      
                     ),
                   ),
                 ),
